@@ -21,4 +21,4 @@ class Employee(BaseModel):
     position = models.CharField(max_length=100)
     salary = models.IntegerField()
     photo = models.ImageField()
-    department = models.OneToOneField(to=Department, related_name='employees', on_delete=models.CASCADE)
+    department = models.ForeignKey(to=Department, related_name='employees', on_delete=models.CASCADE)
